@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+body {
+    width: 100%;
+    min-width: 800px;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(22, 22, 22);
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: white;
+}
+header {
+    z-index: 100;
+    width: 100%;
+    height: 3rem;
+
+    display: block;
+    right: 0;
+
+    position: absolute;
+    border-bottom: 1px solid rgba(8, 123, 255, 0.226);
+    transition: all .2s ease-in-out;
+    animation: rotate-color 5s alternate infinite;
+}   
+/*header:hover {
+    backdrop-filter: blur(10px) brightness(120%);
+}*/
+.menu {
+    width: 30rem;
+    height: 100%;
+
+    display: flex;
+    position: relative;
+    float: right;
+}
+header img {
+    display: none;
+}
+.menu ul {
+    width: 100%;
+    height: 100%;
+
+    font-weight: bold;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu ul li {
+    padding: .8rem .3rem;
+    transition: all .3s ease-in-out;
+}
+.menu ul li:hover {
+    transform: translateY(10px);
+}
+.body-content {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-title {
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3rem 7% 0rem 7%;
+    background-image: url(img/uso/bk_fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+}
+.content-title div {
+    height: 100%;
+    width: 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.content-title div img, .content-title div h1 {
+    width: auto;
+    height: 100%;
+    margin-bottom: -20px;
+
+    position: absolute;
+    right: 0;
+    font-size: 6em;
+}
+.content-title div h1 {
+    height: auto;
+}
+.content-title div h1 span {
+    font-size: 2rem;
+    margin-left: 5px;
+    letter-spacing: 3px;
+}
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    
+    position: relative;
+}
+.body-content section {
+    width: 100%;
+    height: auto;
+}
+.main-article {
+    width: 31rem;
+    height: 100%;
+}
+.main-article h2 {
+    font-size: 3rem;
+}
+.main-article h4 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.d-image {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(21, 113, 218);
+    flex-shrink: 0;
+    transition: all 1s ease;
+    animation: rotate-color 5s alternate infinite;
+    
+}
+.d-image:hover {
+    transform: rotateZ(80deg);
+    border-radius: 10%;
+    border-bottom: 2px solid rgba(18, 182, 182, 0.685);
+    border-top: 2px solid rgba(18, 182, 182, 0.685);
+}
+.d-image:hover img {
+    transform: rotateZ(-85deg);
+}
+.d-image img {
+    width: 100%;
+    transition: all 1s ease;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    filter: grayscale(100%);
+}
+.information-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    border-radius: 50px 50px 0 0;
+    background-color: white;
+    color: black;
+}
+.information-content article {
+    width: 18.5rem;
+    min-width: 5rem;
+    height: auto;
+    margin: .7rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1.5px solid rgba(0, 0, 0, 0.236);
+    transition: all .3s ease-out;
+}
+.information-content article:hover {
+    animation: border-animate .5s normal;
+    border-radius: 15px;
+    transform: translateY(-15px);
+    
+}
+.information-content article h3 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.information-content article p {
+    width: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+.information-content article li {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+
+footer {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(14, 14, 14);
+}
+footer button {
+    width: 30%;
+    height: 100%;
+    border:none;
+    background-color: rgb(14, 14, 14);
+    transition: all .2s ease-in-out;
+}
+footer button a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+footer button img {
+    height: 80%;
+    margin-top: 5px;
+    filter: brightness(300%) ;
+    animation: rotate-color 10s alternate infinite;
+}
+footer button:hover img {
+    animation: moviment 2s infinite ease-in-out;
+}
+footer button:hover {
+    height: 120%;
+    margin-top: -7px;
+    border: 1.5px solid rgba(0, 0, 255, 0.438);
+    border-radius: 5px 5px 0 0;
+    animation: rotate-color 10s alternate infinite;
+}
+@keyframes moviment {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: translateX(0rem);
+    }
+    25% {
+        filter: hue-rotate(72deg);
+        transform: translateX(2rem);
+    }
+    50% {
+        filter: hue-rotate(144deg);
+        transform: translateX(-2rem);
+    }
+    75% {
+        filter: hue-rotate(216deg);
+        transform: translateX(.5rem);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        transform: translateX(0rem);
+    }
+}
+@keyframes rotate-color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes border-animate {
+    0% {
+        border-radius: 0 0 0 0;
+    }
+    15% {
+        border-radius: 25px 0 0 0;
+    }
+    30% {
+        border-radius: 45px 25px 0 0;
+    }
+    45% {
+        border-radius: 25px 45px 25px 0;
+    }
+    60% {
+        border-radius: 15px 25px 45px 25px;
+    }
+    75% {
+        border-radius: 15px 15px 25px 45px;
+    }
+    100% {
+        border-radius: 15px;
+    }
+
+}
+@media screen and (max-width:720px){
+    body {
+        min-width: 580px;
+        min-height: 100%;
+        max-height: 2000px;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+    }
+    .menu ul {
+        flex-direction: column;
+        font-size: 3rem;
+    }
+    header>a {
+        z-index: 10;
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-right: 15px;
+        margin-top: 7px;
+    }
+    .menu:target{
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        background-color: rgba(24, 24, 24, 0.990);
+    }
+    
+    header {
+        position: absolute;
+    }
+    header img {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+        margin-right: 15px;
+        margin-top: 7px;
+        display: block;
+    }
+    .content-title {
+        justify-content: space-around;
+    }
+    .content-title div h1 {
+        width: 100%;
+        font-size: 7rem;
+        margin-left: 0;
+    }
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .main-article {
+        width: 25rem;
+        height: 100%;
+    }
+    .main-article h2 {
+        font-size: 2rem;
+    }
+    .main-article h4 {
+        font-size: 1.2rem;
+    }
+    .d-image {
+        width: 7rem;
+        height: 7rem;
+        margin-left: 2rem;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 20px rgb(21, 113, 218);
+        flex-shrink: 0;
+        transition: all 1s ease;
+        animation: rotate-color 5s alternate infinite;
+        
+    }
+    .information-content {
+        width: 100%;
+        max-width: 600px;
+        height: 20%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .information-content article {
+        width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+        body {
+            min-width: 400px;
+        }
+        .content-title div h1 {
+            font-size: 4rem;
+        }
+    }
+}
