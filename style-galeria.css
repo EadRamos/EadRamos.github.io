@@ -1,0 +1,107 @@
+.title-body {
+    font-size: 3rem;
+    margin-top: 3rem;
+    font-weight: normal;
+}
+.content-galery {
+    box-shadow: 0 0 20px blue;
+    width: 80%;
+    min-width: 700px;
+    max-width: 1500px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    gap: 12px;
+    scroll-behavior: 10px;
+    align-items: center;
+    border: 1px solid rgba(26, 133, 221, 0.589);
+    border-radius: 10px;
+    animation: rotate-color-shadow 10s alternate infinite;
+}
+
+  /* Works on Chrome, Edge, and Safari */
+.content-galery::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.content-galery::-webkit-scrollbar-track {
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.253);
+}
+  
+.content-galery::-webkit-scrollbar-thumb {
+    background-color: rgb(62, 120, 197);
+}
+.content-galery .content {
+    width: 250px;
+    height: 80%;
+    position: relative;
+    color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 223, 223);
+    flex: 0 0 auto;
+    padding: 24px;
+    border: 1px solid rgba(26, 133, 221, 0.589);
+    border-radius: 10px;
+    scroll-snap-align: start;
+    overflow: hidden;
+    
+}
+.content:hover .title-content{
+    display: inline;
+}
+.content:hover img {
+    height: 150%;
+}
+.content img {
+    width: auto;
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+.title-content {
+    text-align: center;
+    width: 100%;
+    display: none;
+    height: 150px;
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50%;
+    backdrop-filter: blur(3px) brightness(125%);
+    transition: all .2s ease-in-out;
+}
+.title-content p {
+    text-align: justify;
+}
+@keyframes rotate-color-shadow {
+    0% {
+        box-shadow: 0 0 20px rgba(3, 122, 233, 0.527);
+    }
+    25% {
+        box-shadow: 0 0 10px rgba(179, 3, 233, 0.527);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(233, 3, 3, 0.527);
+    }
+    75% {
+        box-shadow: 0 0 10px rgba(195, 3, 233, 0.527);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(3, 122, 233, 0.527);
+    }
+}
+@keyframes rotate-color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
