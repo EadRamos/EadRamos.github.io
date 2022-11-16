@@ -1,121 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-body {
-    width: 100%;
-    min-width: 800px;
-    min-height: 100vh;
-    position: relative;
-    background-color: rgb(22, 22, 22);
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    color: white;
-}
-header {
-    z-index: 100;
-    width: 100%;
-    height: 3rem;
-
-    display: block;
-    right: 0;
-
-    position: absolute;
-    border-bottom: 1px solid rgba(8, 123, 255, 0.226);
-    transition: all .2s ease-in-out;
-    animation: rotate-color 5s alternate infinite;
-}   
-/*header:hover {
-    backdrop-filter: blur(10px) brightness(120%);
-}*/
-.menu {
-    width: 30rem;
-    height: 100%;
-
-    display: flex;
-    position: relative;
-    float: right;
-}
-header img {
-    display: none;
-}
-.menu ul {
-    width: 100%;
-    height: 100%;
-
-    font-weight: bold;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: space-around;
-}
-.menu ul li {
-    padding: .8rem .3rem;
-    transition: all .3s ease-in-out;
-}
-.menu ul li:hover {
-    transform: translateY(10px);
-}
-.body-content {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.content-title {
-    width: 100%;
-    height: 13rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 3rem 7% 0rem 7%;
-    background-image: url(img/uso/bk_fundo.jpg);
-    background-repeat: no-repeat;
-    background-position: center 60%;
-    background-size: cover;
-}
-.content-title div {
-    height: 100%;
-    width: 20rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.content-title div img, .content-title div h1 {
-    width: auto;
-    height: 100%;
-    margin-bottom: -20px;
-
-    position: absolute;
-    right: 0;
-    font-size: 6em;
-}
-.content-title div h1 {
-    height: auto;
-}
-.content-title div h1 span {
-    font-size: 2rem;
-    margin-left: 5px;
-    letter-spacing: 3px;
-}
 section {
     width: 100%;
+    max-width: 1920px;
     display: flex;
-    justify-content: space-between;
+    /*aqui estava space-betwin*/
+    justify-content: space-evenly;
     align-items: center;
     padding: 2rem 5rem;
     
     position: relative;
 }
-.body-content section {
-    width: 100%;
-    height: auto;
+.information-primare-content {
+    min-height: 350px;
 }
 .main-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 31rem;
     height: 100%;
 }
@@ -129,7 +29,6 @@ section {
 .d-image {
     width: 10rem;
     height: 10rem;
-    margin-left: 2rem;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 20px rgb(21, 113, 218);
@@ -198,66 +97,6 @@ section {
     margin-bottom: 1rem;
 }
 
-
-footer {
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
-    bottom: 0;
-    background-color: rgb(14, 14, 14);
-}
-footer button {
-    width: 30%;
-    height: 100%;
-    border:none;
-    background-color: rgb(14, 14, 14);
-    transition: all .2s ease-in-out;
-}
-footer button a {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-footer button img {
-    height: 80%;
-    margin-top: 5px;
-    filter: brightness(300%) ;
-    animation: rotate-color 10s alternate infinite;
-}
-footer button:hover img {
-    animation: moviment 2s infinite ease-in-out;
-}
-footer button:hover {
-    height: 120%;
-    margin-top: -7px;
-    border: 1.5px solid rgba(0, 0, 255, 0.438);
-    border-radius: 5px 5px 0 0;
-    animation: rotate-color 10s alternate infinite;
-}
-@keyframes moviment {
-    0% {
-        filter: hue-rotate(0deg);
-        transform: translateX(0rem);
-    }
-    25% {
-        filter: hue-rotate(72deg);
-        transform: translateX(2rem);
-    }
-    50% {
-        filter: hue-rotate(144deg);
-        transform: translateX(-2rem);
-    }
-    75% {
-        filter: hue-rotate(216deg);
-        transform: translateX(.5rem);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-        transform: translateX(0rem);
-    }
-}
 @keyframes rotate-color {
     0% {
         filter: hue-rotate(0deg);
@@ -377,12 +216,12 @@ footer button:hover {
     .information-content article {
         width: 100%;
     }
-    @media screen and (max-width: 480px) {
-        body {
-            min-width: 400px;
-        }
-        .content-title div h1 {
-            font-size: 4rem;
-        }
+}
+@media screen and (max-width: 480px) {
+    body {
+        min-width: 400px;
+    }
+    .content-title div h1 {
+        font-size: 4rem;
     }
 }
