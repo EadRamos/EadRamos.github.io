@@ -178,7 +178,7 @@ footer button:hover img {
     }
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:780px){
     body {
         min-width: 580px;
         min-height: 100%;
