@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style-menu.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function mudaImage(foto){
+            document.getElementById("mascotee").src = foto
+        }
+    </script>
 </head>
 <body>
     <!-- HEADER MENU-->
@@ -31,8 +36,8 @@
             <div class="d-title">
                 <h1>YODA<span>INK</span></h1>
             </div>
-            <div class="mascote">
-                <img src="img/uso/mascote.png" alt="mascote">
+            <div onmouseover="mudaImage('img/uso/mascote2.png')" onmouseout="mudaImage('img/uso/mascote.png')" class="mascote">
+                <img id="mascotee" src="img/uso/mascote.png" alt="mascote">
             </div>
         </div>
         <!-- SECTION OF CONTENT-->
