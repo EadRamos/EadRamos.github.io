@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YODAtattoo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style-menu.css">
+    <link rel="stylesheet" href="style-agendar.css">
+    <script>
+
+        function sendMail() {
+            var link = "mailton:eduardostarwors@gmail.com"
+                    + "?cc="+document.getElementById("email").value
+                    + "&subject=" + encodeURIComponent("tattoo" + document.getElementById("nome").value)
+                    + "&body=" + encodeURIComponent(document.getElementById("tattoo").value + document.getElementById("comentario").value);
+            
+            window.location.href = link;
+        }
+    </script>
+
+</head>
+<body>
+    <!-- HEADER MENU-->
+    <header>
+        <img src="img/uso/menu.png" alt="icone menu">
+        <a href="#menu"></a>
+            <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="galeria.html">GALERIA</a></li>
+                    <li><a href="agendar.html">AGENDAR</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!-- HEADER END-->
+    <!-- BODY -->
+    <main class="body-content">
+        <div class="content-title">
+            <div class="d-title">
+                <h1>YODA<span>INK</span></h1>
+            </div>
+            <div onmouseover="mudaImage('img/uso/mascote2.png')" onmouseout="mudaImage('img/uso/mascote.png')" class="mascote">
+                <img id="mascotee" src="img/uso/mascote.png" alt="mascote">
+            </div>
+        </div>
+        <form action="#">
+            <h2>AGENDAR</h2>
+            <label for="nome">Nome</label>
+            <input type="text" dirname="nome" id="nome" placeholder="Nome"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email"><br>
+            <label for="numero">Numero</label>
+            <input type="number" name="numero" id="numero" placeholder="Numero"><br>
+            <label for="tattoo">Tattoo</label>
+            <input type="text" id="tattoo" placeholder="Tattoo Escolhida"><br>
+            <label for="comentario">Comentario</label>
+            <input type="text" id="comentario" placeholder="Comente Sobre"><br>
+            <input onmouseover="sendMail()" type="button" value="submit" id="button-submit">
+        </form>
+    </main>
+    <footer>
+        <button ><a href="https://www.instagram.com/dudu_ironside/" target="_blank" rel="noreferrer noopener"><img src="img/uso/icon-instagram1.png" alt="icone whatsapp"></a></button>
+        <button ><a href="https://wa.me/5579998406542" target="_blank" rel="noreferrer noopener"><img src="img/uso/icon-whatsapp1.png" alt="icone instagram"></a></button>
+    </footer>
+</body>
+</html>
