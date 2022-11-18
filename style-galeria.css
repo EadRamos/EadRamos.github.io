@@ -60,6 +60,7 @@ body {
 }
 .content:hover img {
     width: 150%;
+
 }
 .content:hover {
     border: 3px solid rgba(26, 133, 221, 0.589);
@@ -69,6 +70,7 @@ body {
     width: 110%;
     height: auto;
     transition: all .3s ease-in-out;
+    filter: grayscale(100%);
 }
 .title-content {
     text-align: center;
