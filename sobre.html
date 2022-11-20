@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style-menu.css">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function mudaImage(foto){
-            document.getElementById("mascotee").src = foto
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- HEADER MENU-->
@@ -34,10 +30,11 @@
         <!-- LOCAL TITLE HEADER-->
         <div class="content-title">
             <div class="d-title">
-                <h1>YODA<span>INK</span></h1>
+                <img src="img/uso/logo_com_fundo.png" alt="logo do site com palavras yoda tattoo estudio">
+                <!-- <h1>YODA<span>INK</span></h1>-->
             </div>
-            <div onmouseover="mudaImage('img/uso/mascote2.png')" onmouseout="mudaImage('img/uso/mascote.png')" class="mascote">
-                <img id="mascotee" src="img/uso/mascote.png" alt="mascote">
+            <div class="d-mascote">
+                <img id="mascotee" src="img/uso/mascote.png">
             </div>
         </div>
         <!-- SECTION OF CONTENT-->
