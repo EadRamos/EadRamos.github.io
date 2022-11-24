@@ -8,7 +8,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     color: white;
-    /*padding-bottom: 4rem;*/
 }
 header {
     z-index: 100;
@@ -146,8 +145,8 @@ footer button a {
 footer button img {
     height: 80%;
     margin-top: 5px;
-    filter: brightness(300%) ;
-    animation: rotate-color 10s alternate infinite;
+    filter: brightness(300%) grayscale(100%);
+    /* animation: rotate-color 10s alternate infinite; */
 }
 footer button:hover img {
     animation: moviment 2s infinite ease-in-out;
