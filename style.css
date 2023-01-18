@@ -124,6 +124,20 @@ section {
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
+.amostra-content{
+    background-color: #D9AD77;
+    width: 100%;
+    max-width: 1920px;
+    min-height: 30rem;
+    display: flexbox;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.amostra-content img {
+    min-width: 12rem;
+    width: 20rem;
+}
 
 @keyframes rotate-color {
     0% {
