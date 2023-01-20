@@ -161,23 +161,23 @@ footer button:hover img {
 
 @keyframes moviment {
     0% {
-        filter: hue-rotate(0deg);
+        /*filter: hue-rotate(0deg);*/
         transform: translateX(0rem);
     }
     25% {
-        filter: hue-rotate(72deg);
+        /*filter: hue-rotate(72deg);*/
         transform: translateX(2rem);
     }
     50% {
-        filter: hue-rotate(144deg);
+        /*filter: hue-rotate(144deg);*/
         transform: translateX(-2rem);
     }
     75% {
-        filter: hue-rotate(216deg);
+        /*filter: hue-rotate(216deg);*/
         transform: translateX(.5rem);
     }
     100% {
-        filter: hue-rotate(360deg);
+        /*filter: hue-rotate(360deg);*/
         transform: translateX(0rem);
     }
 }
@@ -199,7 +199,7 @@ footer button:hover img {
     }
     .menu{
         display: none;
-        position: absolute;
+        position: fixed;
     }
     .menu ul {
         flex-grow: 1;
@@ -251,7 +251,7 @@ footer button:hover img {
 }
 @media screen and (max-width: 480px) {
     body {
-        min-width: 400px;
+        min-width: 370px;
     }
     .content-title div h1 {
         font-size: 4rem;
