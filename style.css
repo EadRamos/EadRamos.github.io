@@ -131,12 +131,14 @@ section {
     min-height: 30rem;
     display: flexbox;
     justify-content: space-around;
-    flex-wrap: wrap;
     padding-bottom: 2rem;
 }
 .amostra-content img {
     min-width: 12rem;
     width: 20rem;
+}
+article iframe {
+    width: 100%;
 }
 
 @keyframes rotate-color {
@@ -207,5 +209,8 @@ section {
     }
     .information-content article {
         width: 100%;
+    }
+    .amostra-content img {
+        width: 40%;
     }
 }
